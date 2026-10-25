@@ -18,3 +18,7 @@ results/*
 
 # Local settings (may contain the API token)
 config/environment.env
+
+# Claude Code project instructions (kept local only)
+CLAUDE.md
+docs/prompts/
