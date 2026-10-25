@@ -78,7 +78,31 @@ from your accounts, not by the project scripts.
 
 Every later `git push` to `main` redeploys automatically.
 
-## 4. Live mode from somewhere else (optional, explain only)
+## 4. LIVE LAB on the Vercel site, in a browser on the VM
+
+The deployed page runs in the viewer's browser, so its LIVE LAB mode
+calls `http://127.0.0.1:5000` on the viewer's own computer. On the VM
+itself that is the real backend, so this works without any tunnel:
+
+1. Allow the site in `config/environment.env` (gitignored, local only):
+   ```
+   SDN_QOS_CORS_ORIGINS=http://localhost:5173,http://127.0.0.1:5173,http://localhost:4173,http://127.0.0.1:4173,https://sdn-qos.vercel.app
+   ```
+   and restart the backend (`bash scripts/stop_lab.sh`, then
+   `bash scripts/start_lab.sh`).
+2. Start the lab: `bash scripts/start_lab.sh`.
+3. In Firefox on the VM open https://sdn-qos.vercel.app and click LIVE LAB.
+
+Why this is safe: Flask still listens on 127.0.0.1 only, so no other
+computer can reach it; the allowlist only lets that one website read the
+API from a browser running on the VM. Browsers allow an https:// page to
+call http://127.0.0.1 because loopback counts as a secure address (newer
+Chrome versions may first ask for permission to access local devices).
+
+On any other computer the same button shows the red "Cannot reach the
+backend" state, which is correct.
+
+## 5. Live mode from somewhere else (optional, explain only)
 
 For the faculty demo, run the dashboard on the VM itself (table above).
 If a live view is ever needed on another machine, the safe way is:

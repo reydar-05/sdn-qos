@@ -1,0 +1,48 @@
+Experiment 20261025-211618
+Steady window: 20 s to 50 s of each run (background 10-50 s)
+
+LIGHT load   (n valid: baseline 3, qos 3)
+  metric                          baseline                 qos                      source
+  Video received (Mbit/s)         4                        4                        host
+  Video loss (%)                  0                        0                        host
+  Video jitter (ms)               0.0756 (0.0711-0.0821)   0.0711 (0.0689-0.0748)   host
+  Ping RTT avg (ms)               0.168 (0.158-0.185)      0.111 (0.104-0.121)      host
+  Ping RTT max (ms)               2.8 (1.47-4.17)          0.668 (0.276-0.952)      host
+  Ping probes lost                0                        0                        host
+  Background received (Mbit/s)    3                        3                        host
+  Background loss (%)             0                        0                        host
+  Buffering events (model)        0                        0                        model
+  Buffering time s (model)        0                        0                        model
+  Congestion detected after (s)   -                        -                        controller
+  Reroute after (s)               -                        -                        controller
+  Rule install (ms)               -                        -                        controller
+  Reroutes per run                0                        0                        controller
+  Util s4->s2 Path A              0.721 (0.721-0.721)      0.721 (0.721-0.721)      controller
+  Util s4->s3 Path B              0                        0                        controller
+  Drops queue 0 s4-eth2           0                        0                        kernel tc
+  Drops queue 1 s4-eth2           0                        0                        kernel tc
+
+HEAVY load   (n valid: baseline 3, qos 3)
+  metric                          baseline                 qos                      source
+  Video received (Mbit/s)         2.55 (2.2-3.24)          4                        host
+  Video loss (%)                  36.2 (19-45)             0                        host
+  Video jitter (ms)               0.566 (0.488-0.698)      0.0738 (0.0643-0.083)    host
+  Ping RTT avg (ms)               31.4 (30.7-31.8)         0.115 (0.094-0.134)      host
+  Ping RTT max (ms)               32.9 (32.5-33.1)         0.888 (0.394-1.79)       host
+  Ping probes lost                58 (57-59)               0                        host
+  Background received (Mbit/s)    7.16 (6.47-7.51)         9                        host
+  Background loss (%)             20.5 (16.6-28.1)         0                        host
+  Buffering events (model)        6.33 (3-8)               0                        model
+  Buffering time s (model)        7.1 (3.31-9.07)          0                        model
+  Congestion detected after (s)   5.82 (5.67-5.94)         6.03 (5.96-6.18)         controller
+  Reroute after (s)               -                        6.04 (5.97-6.19)         controller
+  Rule install (ms)               -                        11.1 (9.1-14.4)          controller
+  Reroutes per run                0                        1                        controller
+  Util s4->s2 Path A              0.999 (0.998-1)          0.926 (0.926-0.927)      controller
+  Util s4->s3 Path B              0                        0.412 (0.412-0.412)      controller
+  Drops queue 0 s4-eth2           1.12e+04 (1.11e+04-1.12e+04) 1.66e+03 (1.64e+03-1.7e+03) kernel tc
+  Drops queue 1 s4-eth2           0                        0                        kernel tc
+
+Notes: one VM, Mininet emulation, links shaped by OVS HTB. Buffering is a playout
+buffer MODEL fed by measured received video, not a real player. Delay, jitter and
+loss are host measurements (ping, iperf3); the controller measures only rates.

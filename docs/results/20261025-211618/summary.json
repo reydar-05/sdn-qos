@@ -1,0 +1,1250 @@
+{
+ "id": "20261025-211618",
+ "finished": 1792944147.5759816,
+ "groups": [
+  {
+   "mode": "baseline",
+   "load": "light",
+   "runs": 3,
+   "valid_runs": 3,
+   "invalid": [],
+   "metrics": {
+    "steady_video_mbps": {
+     "mean": 4.0,
+     "min": 4.0,
+     "max": 4.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      4.0,
+      4.0,
+      4.0
+     ]
+    },
+    "steady_video_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "steady_video_jitter_ms": {
+     "mean": 0.0756,
+     "min": 0.0711,
+     "max": 0.0821,
+     "stdev": 0.0058,
+     "n": 3,
+     "values": [
+      0.0711,
+      0.0821,
+      0.0735
+     ]
+    },
+    "steady_ping_avg_ms": {
+     "mean": 0.1683,
+     "min": 0.158,
+     "max": 0.185,
+     "stdev": 0.0146,
+     "n": 3,
+     "values": [
+      0.158,
+      0.162,
+      0.185
+     ]
+    },
+    "steady_ping_max_ms": {
+     "mean": 2.7967,
+     "min": 1.47,
+     "max": 4.17,
+     "stdev": 1.3506,
+     "n": 3,
+     "values": [
+      4.17,
+      1.47,
+      2.75
+     ]
+    },
+    "steady_ping_stdev_ms": {
+     "mean": 0.306,
+     "min": 0.18,
+     "max": 0.431,
+     "stdev": 0.1255,
+     "n": 3,
+     "values": [
+      0.431,
+      0.18,
+      0.307
+     ]
+    },
+    "steady_ping_lost": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "steady_bg_mbps": {
+     "mean": 3.0,
+     "min": 3.0,
+     "max": 3.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      3.0,
+      3.0,
+      3.0
+     ]
+    },
+    "steady_bg_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "load_video_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "load_video_jitter_ms": {
+     "mean": 0.0822,
+     "min": 0.0758,
+     "max": 0.0865,
+     "stdev": 0.0056,
+     "n": 3,
+     "values": [
+      0.0842,
+      0.0865,
+      0.0758
+     ]
+    },
+    "load_ping_avg_ms": {
+     "mean": 0.1727,
+     "min": 0.158,
+     "max": 0.199,
+     "stdev": 0.0229,
+     "n": 3,
+     "values": [
+      0.158,
+      0.161,
+      0.199
+     ]
+    },
+    "load_bg_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_stall_count": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_stall_time_s": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_startup_delay_s": {
+     "mean": 2.0377,
+     "min": 2.037,
+     "max": 2.039,
+     "stdev": 0.0012,
+     "n": 3,
+     "values": [
+      2.037,
+      2.037,
+      2.039
+     ]
+    },
+    "ctl_reroutes": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "ctl_util_steady_s4->s2": {
+     "mean": 0.7207,
+     "min": 0.7207,
+     "max": 0.7208,
+     "stdev": 0.0001,
+     "n": 3,
+     "values": [
+      0.7207,
+      0.7208,
+      0.7207
+     ]
+    },
+    "ctl_util_steady_s4->s3": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth2:q0_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth2:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q0_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  {
+   "mode": "baseline",
+   "load": "heavy",
+   "runs": 3,
+   "valid_runs": 3,
+   "invalid": [],
+   "metrics": {
+    "steady_video_mbps": {
+     "mean": 2.5527,
+     "min": 2.198,
+     "max": 3.24,
+     "stdev": 0.5953,
+     "n": 3,
+     "values": [
+      3.24,
+      2.198,
+      2.22
+     ]
+    },
+    "steady_video_loss_pct": {
+     "mean": 36.1943,
+     "min": 19.023,
+     "max": 45.047,
+     "stdev": 14.8732,
+     "n": 3,
+     "values": [
+      19.023,
+      45.047,
+      44.513
+     ]
+    },
+    "steady_video_jitter_ms": {
+     "mean": 0.5656,
+     "min": 0.4879,
+     "max": 0.6982,
+     "stdev": 0.1154,
+     "n": 3,
+     "values": [
+      0.6982,
+      0.4879,
+      0.5106
+     ]
+    },
+    "steady_ping_avg_ms": {
+     "mean": 31.406,
+     "min": 30.687,
+     "max": 31.791,
+     "stdev": 0.6232,
+     "n": 3,
+     "values": [
+      30.687,
+      31.791,
+      31.74
+     ]
+    },
+    "steady_ping_max_ms": {
+     "mean": 32.8667,
+     "min": 32.5,
+     "max": 33.1,
+     "stdev": 0.3215,
+     "n": 3,
+     "values": [
+      33.0,
+      33.1,
+      32.5
+     ]
+    },
+    "steady_ping_stdev_ms": {
+     "mean": 0.5103,
+     "min": 0.483,
+     "max": 0.543,
+     "stdev": 0.0304,
+     "n": 3,
+     "values": [
+      0.543,
+      0.505,
+      0.483
+     ]
+    },
+    "steady_ping_lost": {
+     "mean": 58.0,
+     "min": 57.0,
+     "max": 59.0,
+     "stdev": 1.0,
+     "n": 3,
+     "values": [
+      59.0,
+      57.0,
+      58.0
+     ]
+    },
+    "steady_bg_mbps": {
+     "mean": 7.1553,
+     "min": 6.468,
+     "max": 7.507,
+     "stdev": 0.5953,
+     "n": 3,
+     "values": [
+      6.468,
+      7.507,
+      7.491
+     ]
+    },
+    "steady_bg_loss_pct": {
+     "mean": 20.4973,
+     "min": 16.591,
+     "max": 28.141,
+     "stdev": 6.6201,
+     "n": 3,
+     "values": [
+      28.141,
+      16.591,
+      16.76
+     ]
+    },
+    "load_video_loss_pct": {
+     "mean": 36.2913,
+     "min": 19.113,
+     "max": 45.043,
+     "stdev": 14.8778,
+     "n": 3,
+     "values": [
+      19.113,
+      45.043,
+      44.718
+     ]
+    },
+    "load_video_jitter_ms": {
+     "mean": 0.5648,
+     "min": 0.4962,
+     "max": 0.6874,
+     "stdev": 0.1064,
+     "n": 3,
+     "values": [
+      0.6874,
+      0.4962,
+      0.5109
+     ]
+    },
+    "load_ping_avg_ms": {
+     "mean": 30.9877,
+     "min": 30.451,
+     "max": 31.261,
+     "stdev": 0.4648,
+     "n": 3,
+     "values": [
+      30.451,
+      31.261,
+      31.251
+     ]
+    },
+    "load_bg_loss_pct": {
+     "mean": 20.3647,
+     "min": 16.537,
+     "max": 27.982,
+     "stdev": 6.5968,
+     "n": 3,
+     "values": [
+      27.982,
+      16.575,
+      16.537
+     ]
+    },
+    "model_stall_count": {
+     "mean": 6.3333,
+     "min": 3.0,
+     "max": 8.0,
+     "stdev": 2.8868,
+     "n": 3,
+     "values": [
+      3.0,
+      8.0,
+      8.0
+     ]
+    },
+    "model_stall_time_s": {
+     "mean": 7.0973,
+     "min": 3.305,
+     "max": 9.066,
+     "stdev": 3.2851,
+     "n": 3,
+     "values": [
+      3.305,
+      9.066,
+      8.921
+     ]
+    },
+    "model_startup_delay_s": {
+     "mean": 2.037,
+     "min": 2.037,
+     "max": 2.037,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      2.037,
+      2.037,
+      2.037
+     ]
+    },
+    "ctl_congestion_detected_s": {
+     "mean": 5.8233,
+     "min": 5.67,
+     "max": 5.94,
+     "stdev": 0.1387,
+     "n": 3,
+     "values": [
+      5.86,
+      5.94,
+      5.67
+     ]
+    },
+    "ctl_reroutes": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "ctl_util_steady_s4->s2": {
+     "mean": 0.9988,
+     "min": 0.9976,
+     "max": 0.9997,
+     "stdev": 0.0011,
+     "n": 3,
+     "values": [
+      0.9992,
+      0.9976,
+      0.9997
+     ]
+    },
+    "ctl_util_steady_s4->s3": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth2:q0_dropped": {
+     "mean": 11155.0,
+     "min": 11143.0,
+     "max": 11174.0,
+     "stdev": 16.6433,
+     "n": 3,
+     "values": [
+      11148.0,
+      11174.0,
+      11143.0
+     ]
+    },
+    "tc_s4-eth2:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q0_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  {
+   "mode": "qos",
+   "load": "light",
+   "runs": 3,
+   "valid_runs": 3,
+   "invalid": [],
+   "metrics": {
+    "steady_video_mbps": {
+     "mean": 4.0,
+     "min": 4.0,
+     "max": 4.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      4.0,
+      4.0,
+      4.0
+     ]
+    },
+    "steady_video_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "steady_video_jitter_ms": {
+     "mean": 0.0711,
+     "min": 0.0689,
+     "max": 0.0748,
+     "stdev": 0.0032,
+     "n": 3,
+     "values": [
+      0.0689,
+      0.0696,
+      0.0748
+     ]
+    },
+    "steady_ping_avg_ms": {
+     "mean": 0.1107,
+     "min": 0.104,
+     "max": 0.121,
+     "stdev": 0.0091,
+     "n": 3,
+     "values": [
+      0.121,
+      0.107,
+      0.104
+     ]
+    },
+    "steady_ping_max_ms": {
+     "mean": 0.668,
+     "min": 0.276,
+     "max": 0.952,
+     "stdev": 0.3507,
+     "n": 3,
+     "values": [
+      0.952,
+      0.776,
+      0.276
+     ]
+    },
+    "steady_ping_stdev_ms": {
+     "mean": 0.0633,
+     "min": 0.032,
+     "max": 0.085,
+     "stdev": 0.0278,
+     "n": 3,
+     "values": [
+      0.085,
+      0.073,
+      0.032
+     ]
+    },
+    "steady_ping_lost": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "steady_bg_mbps": {
+     "mean": 3.0,
+     "min": 3.0,
+     "max": 3.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      3.0,
+      3.0,
+      3.0
+     ]
+    },
+    "steady_bg_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "load_video_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "load_video_jitter_ms": {
+     "mean": 0.0705,
+     "min": 0.069,
+     "max": 0.0728,
+     "stdev": 0.002,
+     "n": 3,
+     "values": [
+      0.069,
+      0.0728,
+      0.0696
+     ]
+    },
+    "load_ping_avg_ms": {
+     "mean": 0.111,
+     "min": 0.104,
+     "max": 0.12,
+     "stdev": 0.0082,
+     "n": 3,
+     "values": [
+      0.12,
+      0.109,
+      0.104
+     ]
+    },
+    "load_bg_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_stall_count": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_stall_time_s": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_startup_delay_s": {
+     "mean": 2.037,
+     "min": 2.037,
+     "max": 2.037,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      2.037,
+      2.037,
+      2.037
+     ]
+    },
+    "ctl_reroutes": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "ctl_util_steady_s4->s2": {
+     "mean": 0.7207,
+     "min": 0.7207,
+     "max": 0.7208,
+     "stdev": 0.0001,
+     "n": 3,
+     "values": [
+      0.7207,
+      0.7207,
+      0.7208
+     ]
+    },
+    "ctl_util_steady_s4->s3": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth2:q0_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth2:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q0_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  },
+  {
+   "mode": "qos",
+   "load": "heavy",
+   "runs": 3,
+   "valid_runs": 3,
+   "invalid": [],
+   "metrics": {
+    "steady_video_mbps": {
+     "mean": 4.0,
+     "min": 4.0,
+     "max": 4.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      4.0,
+      4.0,
+      4.0
+     ]
+    },
+    "steady_video_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "steady_video_jitter_ms": {
+     "mean": 0.0738,
+     "min": 0.0643,
+     "max": 0.083,
+     "stdev": 0.0094,
+     "n": 3,
+     "values": [
+      0.0643,
+      0.074,
+      0.083
+     ]
+    },
+    "steady_ping_avg_ms": {
+     "mean": 0.1147,
+     "min": 0.094,
+     "max": 0.134,
+     "stdev": 0.02,
+     "n": 3,
+     "values": [
+      0.134,
+      0.094,
+      0.116
+     ]
+    },
+    "steady_ping_max_ms": {
+     "mean": 0.8877,
+     "min": 0.394,
+     "max": 1.79,
+     "stdev": 0.7826,
+     "n": 3,
+     "values": [
+      1.79,
+      0.479,
+      0.394
+     ]
+    },
+    "steady_ping_stdev_ms": {
+     "mean": 0.0847,
+     "min": 0.045,
+     "max": 0.158,
+     "stdev": 0.0636,
+     "n": 3,
+     "values": [
+      0.158,
+      0.051,
+      0.045
+     ]
+    },
+    "steady_ping_lost": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "steady_bg_mbps": {
+     "mean": 9.0,
+     "min": 9.0,
+     "max": 9.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      9.0,
+      9.0,
+      9.0
+     ]
+    },
+    "steady_bg_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "load_video_loss_pct": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "load_video_jitter_ms": {
+     "mean": 0.0754,
+     "min": 0.0717,
+     "max": 0.0797,
+     "stdev": 0.004,
+     "n": 3,
+     "values": [
+      0.0717,
+      0.0748,
+      0.0797
+     ]
+    },
+    "load_ping_avg_ms": {
+     "mean": 0.1173,
+     "min": 0.099,
+     "max": 0.134,
+     "stdev": 0.0176,
+     "n": 3,
+     "values": [
+      0.134,
+      0.099,
+      0.119
+     ]
+    },
+    "load_bg_loss_pct": {
+     "mean": 5.3433,
+     "min": 5.266,
+     "max": 5.482,
+     "stdev": 0.1204,
+     "n": 3,
+     "values": [
+      5.482,
+      5.266,
+      5.282
+     ]
+    },
+    "model_stall_count": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_stall_time_s": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "model_startup_delay_s": {
+     "mean": 2.038,
+     "min": 2.037,
+     "max": 2.04,
+     "stdev": 0.0017,
+     "n": 3,
+     "values": [
+      2.037,
+      2.04,
+      2.037
+     ]
+    },
+    "ctl_congestion_detected_s": {
+     "mean": 6.0333,
+     "min": 5.96,
+     "max": 6.18,
+     "stdev": 0.127,
+     "n": 3,
+     "values": [
+      6.18,
+      5.96,
+      5.96
+     ]
+    },
+    "ctl_reroute_s": {
+     "mean": 6.0433,
+     "min": 5.97,
+     "max": 6.19,
+     "stdev": 0.127,
+     "n": 3,
+     "values": [
+      6.19,
+      5.97,
+      5.97
+     ]
+    },
+    "ctl_reroute_install_ms": {
+     "mean": 11.1333,
+     "min": 9.1,
+     "max": 14.4,
+     "stdev": 2.8572,
+     "n": 3,
+     "values": [
+      9.9,
+      9.1,
+      14.4
+     ]
+    },
+    "ctl_reroutes": {
+     "mean": 1.0,
+     "min": 1.0,
+     "max": 1.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    },
+    "ctl_util_steady_s4->s2": {
+     "mean": 0.9265,
+     "min": 0.9261,
+     "max": 0.9272,
+     "stdev": 0.0006,
+     "n": 3,
+     "values": [
+      0.9272,
+      0.9261,
+      0.9262
+     ]
+    },
+    "ctl_util_steady_s4->s3": {
+     "mean": 0.412,
+     "min": 0.4119,
+     "max": 0.412,
+     "stdev": 0.0001,
+     "n": 3,
+     "values": [
+      0.4119,
+      0.412,
+      0.412
+     ]
+    },
+    "tc_s4-eth2:q0_dropped": {
+     "mean": 1661.0,
+     "min": 1637.0,
+     "max": 1703.0,
+     "stdev": 36.4966,
+     "n": 3,
+     "values": [
+      1703.0,
+      1637.0,
+      1643.0
+     ]
+    },
+    "tc_s4-eth2:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q0_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "tc_s4-eth3:q1_dropped": {
+     "mean": 0.0,
+     "min": 0.0,
+     "max": 0.0,
+     "stdev": 0.0,
+     "n": 3,
+     "values": [
+      0.0,
+      0.0,
+      0.0
+     ]
+    }
+   }
+  }
+ ],
+ "timeline": {
+  "duration": 60,
+  "bg_start": 10,
+  "bg_end": 50,
+  "windows": {
+   "pre": [
+    0,
+    10
+   ],
+   "load": [
+    10,
+    50
+   ],
+   "steady": [
+    20,
+    50
+   ],
+   "post": [
+    50,
+    60
+   ]
+  }
+ },
+ "note": "Mininet emulation on one VM; links shaped by OVS linux-htb; video is iperf3 UDP, buffering is a playout buffer model.",
+ "fields": [
+  "steady_video_mbps",
+  "steady_video_loss_pct",
+  "steady_video_jitter_ms",
+  "steady_ping_avg_ms",
+  "steady_ping_max_ms",
+  "steady_ping_stdev_ms",
+  "steady_ping_lost",
+  "steady_bg_mbps",
+  "steady_bg_loss_pct",
+  "load_video_loss_pct",
+  "load_video_jitter_ms",
+  "load_ping_avg_ms",
+  "load_bg_loss_pct",
+  "model_stall_count",
+  "model_stall_time_s",
+  "model_startup_delay_s",
+  "ctl_congestion_detected_s",
+  "ctl_reroute_s",
+  "ctl_reroute_install_ms",
+  "ctl_reroutes",
+  "ctl_util_steady_s4->s2",
+  "ctl_util_steady_s4->s3",
+  "tc_s4-eth2:q0_dropped",
+  "tc_s4-eth2:q1_dropped",
+  "tc_s4-eth3:q0_dropped",
+  "tc_s4-eth3:q1_dropped"
+ ],
+ "windows_explained": {
+  "steady": "from settle_s after background start to background end",
+  "load": "whole background period"
+ }
+}

@@ -583,9 +583,51 @@ bash scripts/stop_lab.sh               # stop everything (also after a crash)
   renders in DEMO MODE with the banner and DEMO DATA stamps.
 - Fixed after deploy: the Experiments intro said "read from the result
   files" in DEMO MODE too; it now says the demo numbers are invented.
-  Goes live with the next git push.
+  Goes live with the next git push. (Pushed: commit acb7184; the main
+  URL serves the same bundle as the local build.)
+- LIVE LAB on the Vercel site from a browser on the VM: created
+  config/environment.env (gitignored) adding https://sdn-qos.vercel.app to
+  SDN_QOS_CORS_ORIGINS. Checked with curl: that origin gets the CORS
+  header (also on the preflight), other origins do not; Flask still on
+  127.0.0.1 only. Browser check pending (user). docs/deployment.md
+  section 4.
+- Per-deployment URLs (sdn-<hash>-renu-gopu.vercel.app) redirect to a
+  Vercel login: Vercel deployment protection, expected. Share only
+  https://sdn-qos.vercel.app.
 - The tunnel was explained, not installed or tested.
 
-## Phase 8: Documentation - not started
+## Phase 8: Documentation - DONE (2026-10-25)
+
+Done:
+- README.md: description, Mermaid architecture diagram, measured results
+  table (heavy load) with how to read them, quick start, lab menu,
+  dashboard modes, layout, security.
+- docs/how-it-works.md: network, loop safety, queues, video
+  identification, monitoring, detection, anti-flap, make-before-break,
+  measurement sources, playout model and why iperf3, experiment design,
+  results, live lab, limitations.
+- docs/mapping-to-reviews.md: every objective, research gap, step, tool,
+  test case and expected result from both decks, marked Met / Partly met /
+  Different with evidence. Research gap 1 (fast polling) is Partly met:
+  the experiments polled every 2 s.
+- docs/demo-script.md: timed 5 minute faculty demo with lines to say,
+  preparation steps and a troubleshooting table.
+- docs/viva.md: likely questions with short answers.
+- docs/results/20261025-211618/: copy of the final experiment (summary,
+  runs, config, per-second data of one run per mode) so the results are in
+  git.
+
+Tested:
+- Every number quoted in the docs was checked against
+  docs/results/20261025-211618/summary.txt and summary.json; controller
+  function and event names cited were checked in sdn/controller.py.
+- No em or en dashes in README.md, docs/*.md or the frontend sources.
+
+Open issues:
+- The new docs are not pushed yet (git add, commit, push).
+- LIVE LAB on https://sdn-qos.vercel.app from the VM browser: CORS checked
+  with curl, browser check still to do.
+- Mermaid diagram not rendered locally; check it on GitHub after pushing.
+
 
 

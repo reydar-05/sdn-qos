@@ -1,0 +1,58 @@
+{
+ "id": "20261025-211618",
+ "started": 1792943178.5974965,
+ "started_local": "2026-10-25 21:16:18",
+ "args": {
+  "mode": "both",
+  "load": "both",
+  "duration_s": 60,
+  "runs": 3
+ },
+ "timeline": {
+  "duration": 60,
+  "bg_start": 10,
+  "bg_end": 50,
+  "windows": {
+   "pre": [
+    0,
+    10
+   ],
+   "load": [
+    10,
+    50
+   ],
+   "steady": [
+    20,
+    50
+   ],
+   "post": [
+    50,
+    60
+   ]
+  }
+ },
+ "config": "/home/renu05/sdn-qos/config/config.yaml",
+ "plan": [
+  "baseline-light-run1",
+  "qos-light-run1",
+  "baseline-heavy-run1",
+  "qos-heavy-run1",
+  "baseline-light-run2",
+  "qos-light-run2",
+  "baseline-heavy-run2",
+  "qos-heavy-run2",
+  "baseline-light-run3",
+  "qos-light-run3",
+  "baseline-heavy-run3",
+  "qos-heavy-run3"
+ ],
+ "versions": {
+  "kernel": "6.8.0-138-generic",
+  "ovs": "ovs-vsctl (Open vSwitch) 2.17.12",
+  "mininet": "2.3.0",
+  "iperf3": "iperf 3.9 (cJSON 1.7.13)",
+  "ryu": "ryu-manager 4.34"
+ },
+ "note": "Mininet emulation on one VM; links shaped by OVS linux-htb; video is iperf3 UDP, buffering is a playout buffer model.",
+ "finished": 1792944147.5776293
+}

@@ -1,0 +1,123 @@
+# Single configuration file for the SDN QoS project.
+# Read by sdn/topology.py (system python3, under sudo), by the Ryu
+# controller (venv) and by the Flask backend. Change values here only.
+
+# ---------------------------------------------------------------------
+# Video flow (iperf3 UDP acting as the video stream)
+# ---------------------------------------------------------------------
+video:
+  port: 5004              # video traffic is recognised by this UDP port
+  bitrate_mbps: 4         # rate the video source sends at
+  server: h2              # sends the video (iperf3 -R makes h2 the sender)
+  client: h1              # receives the video
+  # ICMP between client and server follows the video path and queue, so
+  # ping RTT measures what video packets experience. Set false to let
+  # ping use the default rules instead.
+  ping_follows_video: true
+
+# ---------------------------------------------------------------------
+# Monitoring and congestion detection (controller)
+# ---------------------------------------------------------------------
+monitoring:
+  poll_interval_s: 2          # port stats request period
+  utilization_threshold: 0.80 # link is "over" above this fraction of capacity
+  consecutive_polls: 3        # polls in a row over threshold before acting
+  cooldown_s: 20              # no new reroute for this long after one
+  max_reroutes_per_run: 4     # hard stop against endless rerouting
+  stats_timeout_s: 5          # a switch reply older than this is "missing"
+
+# ---------------------------------------------------------------------
+# Links, bottleneck capacity and queues
+# Capacity is enforced with Open vSwitch linux-htb QoS on both ends of
+# every switch-to-switch link (NOT Mininet TCLink).
+# ---------------------------------------------------------------------
+links:
+  default_capacity_mbps: 10
+  # Buffer of each queue on a switch port, in packets. 25 packets of
+  # 1500 bytes drain in 30 ms at 10 Mbit/s, like a small router buffer.
+  # Why so small: in Mininet all hosts share one kernel, and a sending
+  # socket can only have about 40 packets waiting anywhere. With a bigger
+  # buffer the sender just slows down instead of the switch dropping
+  # (docs/PROGRESS.md, Phase 2 and Phase 3 findings).
+  queue_limit_packets: 25
+
+queues:
+  # queue 0: default queue for all non-video traffic
+  # queue 1: video priority queue with a guaranteed (min) rate
+  video_queue_id: 1
+  default_queue_id: 0
+  video_min_mbps: 6       # reserved for video when the link is full
+  default_min_mbps: 4     # what other traffic keeps under contention (6 + 4 = link capacity)
+
+# ---------------------------------------------------------------------
+# Background traffic (iperf3 UDP from h3, same bottleneck as the video)
+# ---------------------------------------------------------------------
+background:
+  host: h3
+  port: 5201
+  light_mbps: 3           # video 4 + 3 = 7 Mbit/s, below the threshold
+  heavy_mbps: 9           # video 4 + 9 = 13 Mbit/s, over a 10 Mbit/s link
+
+# ---------------------------------------------------------------------
+# Experiments (sdn/run_experiment.py). Same timeline in every run:
+# video for duration_s; background from background_start_s until
+# background_stop_before_end_s before the end. The "steady" window
+# starts settle_s after the background starts (detection and reroute
+# happen before it).
+# ---------------------------------------------------------------------
+experiment:
+  duration_s: 60
+  background_start_s: 10
+  background_stop_before_end_s: 10
+  settle_s: 10
+  runs: 3
+  # a run only counts if every iperf3 sender sent at least this share of
+  # its configured rate (otherwise the host, not the switch, limited it)
+  min_sender_ratio: 0.97
+
+# Playout buffer MODEL fed by the measured per-second received video.
+# Not a real player; see sdn/playout_model.py.
+playout_model:
+  startup_buffer_s: 2.0
+  resume_buffer_s: 1.0
+
+# ---------------------------------------------------------------------
+# Topology: ingress s1 (h1 client, h3 background), egress s4 (h2 server)
+# Path A: s1-s2-s4   Path B: s1-s3-s4
+# Port numbers are fixed so OpenFlow port N is interface sX-ethN.
+# ---------------------------------------------------------------------
+topology:
+  switches:
+    s1: 1
+    s2: 2
+    s3: 3
+    s4: 4
+  hosts:
+    h1: {ip: 10.0.0.1, mac: "00:00:00:00:00:01", switch: s1, port: 1, role: client}
+    h2: {ip: 10.0.0.2, mac: "00:00:00:00:00:02", switch: s4, port: 1, role: server}
+    h3: {ip: 10.0.0.3, mac: "00:00:00:00:00:03", switch: s1, port: 2, role: background}
+  links:
+    - {a: s1, a_port: 3, b: s2, b_port: 1}
+    - {a: s2, a_port: 2, b: s4, b_port: 2}
+    - {a: s1, a_port: 4, b: s3, b_port: 1}
+    - {a: s3, a_port: 2, b: s4, b_port: 3}
+    # add capacity_mbps: N to a link entry to override the default
+  paths:
+    A: [s1, s2, s4]
+    B: [s1, s3, s4]
+  primary_path: A
+
+# ---------------------------------------------------------------------
+# Processes (all bound to 127.0.0.1)
+# ---------------------------------------------------------------------
+controller:
+  openflow_host: 127.0.0.1
+  openflow_port: 6653
+
+backend:
+  host: 127.0.0.1
+  port: 5000
+  url: http://127.0.0.1:5000
+
+results:
+  dir: results
