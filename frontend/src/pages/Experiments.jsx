@@ -139,8 +139,10 @@ export default function Experiments() {
     <div className="space-y-4">
       <PageHeader title="Experiments and results">
         Best-effort baseline against the QoS controller (congestion detection, reroute, priority queue), under light and heavy
-        background load. Numbers below are read from the experiment's result files, measured in the steady window
-        ({meta.timeline?.windows?.steady?.join(' to ')} s of each {meta.timeline?.duration} s run).
+        background load. {e.demo
+          ? 'In DEMO MODE the numbers below are invented sample values that only show the layout; they are not measured.'
+          : "Numbers below are read from the experiment's result files, measured in the steady window"}
+        {!e.demo && ` (${meta.timeline?.windows?.steady?.join(' to ')} s of each ${meta.timeline?.duration} s run).`}
       </PageHeader>
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <Card title="This experiment">

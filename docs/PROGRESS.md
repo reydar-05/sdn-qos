@@ -575,9 +575,15 @@ bash scripts/stop_lab.sh               # stop everything (also after a crash)
 - git add dry run: 85 files, no .venv, node_modules, dist, results or
   config/environment.env; no secrets found.
 
-### Not done here (needs the user's accounts)
-- GitHub push and Vercel deployment: neither CLI is installed and both
-  publish from the user's accounts. Steps in docs/deployment.md section 3.
+### Deployed (by the user, 2026-10-25)
+- GitHub: https://github.com/reydar-05/sdn-qos (branch main)
+- Vercel: https://sdn-qos.vercel.app (Root Directory frontend)
+- Checked from the VM: HTTP 200, CSP / X-Frame-Options / nosniff /
+  Referrer-Policy headers present, same bundle as the local build, page
+  renders in DEMO MODE with the banner and DEMO DATA stamps.
+- Fixed after deploy: the Experiments intro said "read from the result
+  files" in DEMO MODE too; it now says the demo numbers are invented.
+  Goes live with the next git push.
 - The tunnel was explained, not installed or tested.
 
 ## Phase 8: Documentation - not started
