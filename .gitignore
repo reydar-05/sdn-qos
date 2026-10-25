@@ -1,0 +1,20 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node / frontend
+node_modules/
+frontend/dist/
+
+# Results produced by running the project (not source)
+results/*
+!results/.gitkeep
+
+# Editors / OS
+.vscode/
+*.swp
+.DS_Store
+
+# Local settings (may contain the API token)
+config/environment.env

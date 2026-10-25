@@ -1,0 +1,26 @@
+# Ryu OpenFlow 1.3 controller dependencies.
+# Installed with: pip install --no-build-isolation -r sdn/requirements.txt
+# --no-build-isolation is required: ryu's legacy setup.py needs the venv's
+# own (older) setuptools during the build, not a fresh isolated one.
+#
+# Known compatibility issues on Python 3.10, diagnosed and fixed:
+# 1. ryu's setup.py patches setuptools.command.easy_install.get_script_args,
+#    which modern setuptools (>=58) no longer exposes. Fix: setuptools<58
+#    must already be installed in the venv before this file is installed.
+# 2. eventlet==0.30.2 (the fix commonly suggested for Ryu) crashes on this
+#    Python patch version: it tries to monkeypatch an attribute onto the
+#    built-in TimeoutError, which is now an immutable C type.
+#    eventlet==0.33.3 fixes this, and also fixes eventlet's DNS patching
+#    (greendns) for modern dnspython. Older eventlet 0.3x releases have one
+#    bug or the other, not both fixed.
+# 3. eventlet==0.33.3 removed the ALREADY_HANDLED sentinel from
+#    eventlet.wsgi (replaced by a thread-local flag). ryu/app/wsgi.py
+#    (unmaintained since 2020) still imports it. This file in the venv was
+#    patched directly (see docs/troubleshooting.md) since it only affects
+#    the unused @websocket decorator path.
+
+setuptools<58
+eventlet==0.33.3
+dnspython>=2.0
+ryu==4.34
+requests

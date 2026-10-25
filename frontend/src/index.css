@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+/* Colour tokens. Light values here, dark values below. Tailwind classes such
+   as bg-surface or text-muted read these, so the theme switches in one place.
+   Chart colours were checked with a colour-blind safety validator. */
+:root {
+  color-scheme: light;
+  --page: #f4f4f2;
+  --surface: #fcfcfb;
+  --surface-2: #f0efec;
+  --border: #e2e1dc;
+  --grid: #e8e7e3;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --ink-3: #7a7974;
+
+  /* series */
+  --qos: #2a78d6;        /* QoS run */
+  --baseline: #eb6834;   /* best-effort baseline run */
+  --path-a: #6250d6;     /* Path A s1-s2-s4 */
+  --path-b: #1baf7a;     /* Path B s1-s3-s4 */
+  --video: #2a78d6;
+  --bg-traffic: #eb6834;
+
+  /* status, always shown with an icon and a label */
+  --good: #0ca30c;
+  --warning: #fab219;
+  --critical: #d03b3b;
+  --good-ink: #006300;
+  --critical-ink: #a32626;
+
+  /* mode banners */
+  --live-bg: #e6f4e6;
+  --live-ink: #0d4d0d;
+  --demo-bg: #fff1cc;
+  --demo-ink: #6b4500;
+  --error-bg: #fbe5e5;
+  --error-ink: #7a1b1b;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --page: #111110;
+    --surface: #1a1a19;
+    --surface-2: #232321;
+    --border: #33332f;
+    --grid: #2b2b28;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --ink-3: #94938b;
+    --qos: #3987e5;
+    --baseline: #d95926;
+    --path-a: #9085e9;
+    --path-b: #199e70;
+    --video: #3987e5;
+    --bg-traffic: #d95926;
+    --good-ink: #5cd65c;
+    --critical-ink: #f08a8a;
+    --live-bg: #12301a;
+    --live-ink: #a8e6b0;
+    --demo-bg: #3a2c05;
+    --demo-ink: #ffd87a;
+    --error-bg: #3a1414;
+    --error-ink: #ffb3b3;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #111110;
+  --surface: #1a1a19;
+  --surface-2: #232321;
+  --border: #33332f;
+  --grid: #2b2b28;
+  --ink: #f0efec;
+  --ink-2: #c3c2b7;
+  --ink-3: #94938b;
+  --qos: #3987e5;
+  --baseline: #d95926;
+  --path-a: #9085e9;
+  --path-b: #199e70;
+  --video: #3987e5;
+  --bg-traffic: #d95926;
+  --good-ink: #5cd65c;
+  --critical-ink: #f08a8a;
+  --live-bg: #12301a;
+  --live-ink: #a8e6b0;
+  --demo-bg: #3a2c05;
+  --demo-ink: #ffd87a;
+  --error-bg: #3a1414;
+  --error-ink: #ffb3b3;
+}
+
+@theme inline {
+  --color-page: var(--page);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-qos: var(--qos);
+  --color-baseline: var(--baseline);
+  --color-path-a: var(--path-a);
+  --color-path-b: var(--path-b);
+  --color-good: var(--good);
+  --color-warning: var(--warning);
+  --color-critical: var(--critical);
+  --color-good-ink: var(--good-ink);
+  --color-critical-ink: var(--critical-ink);
+  --color-live-bg: var(--live-bg);
+  --color-live-ink: var(--live-ink);
+  --color-demo-bg: var(--demo-bg);
+  --color-demo-ink: var(--demo-ink);
+  --color-error-bg: var(--error-bg);
+  --color-error-ink: var(--error-ink);
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html, body {
+  background: var(--page);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabular { font-variant-numeric: tabular-nums; }
+
+/* Recharts text uses the ink tokens, never the series colour */
+.recharts-cartesian-axis-tick-value { fill: var(--ink-3); font-size: 11px; }
+.recharts-legend-item-text { color: var(--ink-2) !important; }

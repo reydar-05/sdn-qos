@@ -1,0 +1,6 @@
+# Flask backend dependencies.
+# Installed with: pip install -r backend/requirements.txt
+
+flask
+flask-cors
+requests

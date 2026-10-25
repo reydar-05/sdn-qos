@@ -1,0 +1,5 @@
+# Tooling-only dependency, not part of the running project.
+# Used to read the requirement decks in docs/requirements/ with python-pptx.
+# Installed with: pip install -r scripts/requirements-docs.txt
+
+python-pptx
